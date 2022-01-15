@@ -13,10 +13,8 @@ function computerPlay() {
     }
 }
 
-prompt("Rock, Paper, or Scissors?");
-
 function playRPS(playerSelection, computerSelection) {
-    let playerSelection;
+    let playerSelection = prompt("Rock, Paper, or Scissors?");
     let computerSelection = computerPlay();
 
     if(playerSelection === computerSelection) {
