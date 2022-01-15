@@ -13,9 +13,10 @@ function computerPlay() {
     }
 }
 
+let playerSelection = prompt("Rock, Paper, or Scissors?");
+let computerSelection = computerPlay();
+
 function playRPS(playerSelection, computerSelection) {
-    let playerSelection = prompt("Rock, Paper, or Scissors?");
-    let computerSelection = computerPlay();
 
     if(playerSelection === computerSelection) {
         return "Tie."
@@ -28,10 +29,12 @@ function playRPS(playerSelection, computerSelection) {
     } else if(playerSelection === 'Paper' && computerSelection === 'Scissors') {
         return "You Lose! Scissors beats Paper";
     } else if(playerSelection === 'Scissors' && computerSelection === 'Rock') {
-        return 'You Lose! Rock beats Scissors';
+        return "You Lose! Rock beats Scissors";
     } else if(playerSelection === 'Scissors' && computerSelection === 'Paper') {
         return "You Win! Paper beats Scissors";
     } else {
         return "Please select a valid option for the game";
     }
 }
+
+console.log(playRPS(playerSelection, computerSelection));
